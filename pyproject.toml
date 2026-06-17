@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lux-popdd"
+version = "0.1.0"
+description = "POPDD — Proof of Proof-Driven Development. Cryptographic chain-of-custody for any proof system. Zero dependencies. Python."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "Chidi Onyema", email = "chidi@onyema.com" }]
+keywords = ["popdd", "proof-of-proof", "cryptographic", "chain-of-custody", "audit-trail", "tamper-evident"]
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest >= 7.0"]
+dev = ["ruff", "mypy"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["popdd"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
