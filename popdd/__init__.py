@@ -1,5 +1,6 @@
 """POPDD — Proof of Proof-Driven Development."""
 
+from popdd.agent import PopddAgent
 from popdd.receipt import (
     GENESIS_HASH,
     ChainVerification,
@@ -19,6 +20,7 @@ __all__ = [
     "ChainVerification",
     "DecisionReceipt",
     "HmacSigner",
+    "PopddAgent",
     "ProofPayload",
     "ReceiptChain",
     "Signer",
